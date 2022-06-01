@@ -1,0 +1,16 @@
+pageObjects\Page$1.class
+config\Properties.class
+config\ConfigPropertiesReader.class
+drivers\Driver.class
+pageObjects\CategoryPage.class
+pageObjects\HomePage.class
+drivers\DriverFactory.class
+drivers\AppiumDriverManager.class
+drivers\MobileDriver.class
+pageObjects\ProductPage.class
+server\AppiumServer.class
+config\SystemPropertiesReader.class
+pageObjects\Page.class
+enums\Env.class
+pageObjects\CartPage.class
+enums\Direction.class
