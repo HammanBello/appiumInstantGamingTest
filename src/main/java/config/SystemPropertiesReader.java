@@ -15,7 +15,7 @@ public enum SystemPropertiesReader {
     SystemPropertiesReader() {
         env = Env.parse(System.getProperty("env", "production").toUpperCase());
         platformName = System.getProperty("platformName", "Android");
-        platformVersion = System.getProperty("platformVersion", "9.0");
+        platformVersion = System.getProperty("platformVersion", "11.0");
         deviceName = System.getProperty("deviceName", "emulator-5554");
         onBrowser = Boolean.parseBoolean(System.getProperty("onBrowser", "false"));
     }

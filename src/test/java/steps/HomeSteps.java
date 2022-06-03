@@ -34,21 +34,21 @@ public class HomeSteps {
         homePage.launch();
     }
 
-    @Then("User should see message about choosen product results number")
-    public void resultsFoundNumber() {
-        Assert.assertEquals(homePage.verifyFoundResult(),true);
+    @Then("User should see some results under the searchbar with the word {string}")
+    public void resultsFoundNumber(String element) {
+        Assert.assertTrue(homePage.verifyFoundResult(element));
     }
 
-    @Then("User should see suggestions appear")
-    public void suggestionsAppear() {
-        Assert.assertEquals(homePage.verifySuggestions(),true);
-    }
+//    @Then("User should see suggestions appear")
+//    public void suggestionsAppear() {
+//        Assert.assertEquals(homePage.verifySuggestions(),true);
+//    }
 
-    @Then("User should see message about no result found")
-    public void noResultFound() { Assert.assertEquals(homePage.verifyNotFoundResult(),true);}
+//    @Then("User should see message about no result found")
+//    public void noResultFound() { Assert.assertEquals(homePage.verifyNotFoundResult(),true);}
 
-    @Given("User is on category menu")
-    public void categoryMenuPage() { homePage.getOnCategory();}
+//    @Given("User is on category menu")
+//    public void categoryMenuPage() { homePage.getOnCategory();}
 
     @Given("User is on selected {string}")
     public void selectCategory(String category) {
@@ -60,14 +60,17 @@ public class HomeSteps {
         homePage.selectSubcategory(subcategory);
     }
 
-    @Then("User should see {string} title display")
-    public void titleOfDisplay(String title) {
-        Assert.assertEquals(homePage.verifyViewTitle(title),true);
-    }
+//    @Then("User should see {string} title display")
+//    public void titleOfDisplay(String title) {
+//        Assert.assertEquals(homePage.verifyViewTitle(title),true);
+//    }
 
     @When("User enter a {string}")
     public void parfumProductPage(String element) { homePage.makeSearch(element);}
 
 
-
+    @And("User press on search button")
+    public void userPressOnSearchButton() {
+        homePage.clickOnSearchBtn();
+    }
 }

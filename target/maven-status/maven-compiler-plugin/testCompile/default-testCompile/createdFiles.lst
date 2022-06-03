@@ -1,6 +1,3 @@
-runners\BaseRunner.class
-steps\ProductSteps.class
 runners\TestRunner.class
-steps\CartSteps.class
+runners\BaseRunner.class
 steps\HomeSteps.class
-steps\CategorySteps.class
