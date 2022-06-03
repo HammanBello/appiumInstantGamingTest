@@ -7,65 +7,51 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 
-import static java.awt.SystemColor.text;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
 public class HomePage extends Page {
 
     private static final Logger LOG = LogManager.getLogger(HomePage.class);
-
-//    @AndroidFindBy(id = "com.pictime.nocibe:id/catalog_navigation")
-//    private MobileElement categoryView;
-//
-//    @AndroidFindBy(id = "com.pictime.nocibe:id/item_home_top_category")
-//    private MobileElement categoryItem;
-//
-    @AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
-    private MobileElement permissionAllowBtn;
-
-    @AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_foreground_only_button")
-    private MobileElement positionAllowBtn;
-
-    @AndroidFindBy(id = "com.kikuu:id/hot_keys_flipper")
-    private MobileElement searchBarAcces;
-
-    @AndroidFindBy(id = "com.kikuu:id/search_input_et")
-    private MobileElement searchBar;
-
-
-    @AndroidFindBy(id = "com.kikuu:id/tv_skip")
-    private MobileElement skipBtn;
-
-    @AndroidFindBy(id = "com.kikuu:id/search_txt")
-    private MobileElement searchBtn;
-
-//
+    private static int entryAppOccurence = 0;
     @AndroidFindBy(id = "com.kikuu:id/country_txt")
     List<MobileElement> countries;
-
     @AndroidFindBy(id = "com.kikuu:id/product_name_txt")
     List<MobileElement> nomProduits;
-
-//
-//    @AndroidFindBy(id = "com.pictime.nocibe:id/emptyViewTitle")
-//    private MobileElement notFoundInfo;
-//
-//    @AndroidFindBy(id = "com.pictime.nocibe:id/item_home_top_category")
-//    private MobileElement navMenuOption;
-//
+    @AndroidFindBy(accessibility = "Se connecter")
+    private MobileElement loginLink;
+    @AndroidFindBy(id = "com.kikuu:id/tab_cart_img")
+    private MobileElement cartIcon;
+    @AndroidFindBy(id = "com.kikuu:id/login_submit_btn")
+    private MobileElement loginBtn;
+    @AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
+    private MobileElement permissionAllowBtn;
+    @AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_foreground_only_button")
+    private MobileElement positionAllowBtn;
+    @AndroidFindBy(id = "com.kikuu:id/hot_keys_flipper")
+    private MobileElement searchBarAcces;
+    @AndroidFindBy(id = "com.kikuu:id/search_input_et")
+    private MobileElement searchBar;
+    @AndroidFindBy(id = "com.kikuu:id/tv_skip")
+    private MobileElement skipBtn;
+    @AndroidFindBy(id = "com.kikuu:id/search_txt")
+    private MobileElement searchBtn;
+    @AndroidFindBy(id = "com.kikuu:id/et_password")
+    private MobileElement passwordField;
+    @AndroidFindBy(id = "com.kikuu:id/et_account")
+    private MobileElement accountField;
+    @AndroidFindBy(id = "com.kikuu:id/tab_kikuu_img")
+    private MobileElement accountLogo;
+    @AndroidFindBy(id = "com.kikuu:id/m3_profile_user_avatar_parent_layout")
+    private MobileElement loggedHeader;
     @AndroidFindBy(id = "com.kikuu:id/hot_keys_flipper")
     private MobileElement productOccurences;
-//
-//    @AndroidFindBy(className = "android.widget.TextView")
-//    private List<MobileElement> textView;
 
-    private static int entryAppOccurence = 0;
-
-    public void reject(MobileElement element){
+    public void reject(MobileElement element) {
         try {
             shortWaitUntil(visibilityOf(element));
             click(element);
-        }catch (Exception e){}
+        } catch (Exception e) {
+        }
     }
 
 
@@ -74,15 +60,14 @@ public class HomePage extends Page {
 //    }
 
     public void waitForAppLoading() {
-        if (entryAppOccurence==0){
-          reject(permissionAllowBtn);
-          reject(permissionAllowBtn);
-          reject(skipBtn);
-          String text = "";
-          String country = "";
-          int i = 0;
-            while ((!country.equals("Cameroon"))&&(i!= countries.size()))
-            {
+        if (entryAppOccurence == 0) {
+            reject(permissionAllowBtn);
+            reject(permissionAllowBtn);
+            reject(skipBtn);
+            String text = "";
+            String country = "";
+            int i = 0;
+            while ((!country.equals("Cameroon")) && (i != countries.size())) {
                 country = countries.get(i).getText();
                 if (country.equals("Cameroon"))
                     countries.get(i).click();
@@ -90,38 +75,56 @@ public class HomePage extends Page {
                     i++;
             }
 
-          reject(positionAllowBtn);
+            reject(positionAllowBtn);
         }
-        entryAppOccurence++;
+//        entryAppOccurence++;
     }
 
-    public void clickOnSearchBar(){
+    public void clickOnSearchBar() {
         click(searchBarAcces);
     }
 
-    public void clickOnSearchBtn(){
+    public void clickOnSearchBtn() {
         click(searchBtn);
     }
 
-    public void makeSearch(String element){
+    public void clickOnLoginBtn() {
+        click(loginBtn);
+    }
+
+
+    public void makeSearch(String element) {
         searchBar.sendKeys(element);
     }
 
-    public boolean verifyFoundResult(String S){
+    public void login(String cellphone, String password) {
+        accountField.sendKeys(cellphone);
+        passwordField.sendKeys(password);
+    }
+
+
+    public boolean verifyFoundResult(String S) {
+        S = S.toUpperCase();
         System.out.println(nomProduits.size());
-        int i=0;
-        do
-        {
+        int i = 0;
+        do {
             System.out.println(nomProduits.get(i).getText());
             shortWaitUntil(visibilityOf(nomProduits.get(i)));
-            System.out.println(nomProduits.get(i).getText().contains(S));
+            System.out.println(nomProduits.get(i).getText().toUpperCase().contains(S));
             if (!nomProduits.get(i).getText().contains(S))
                 return false;
             i++;
-        }while(i<=nomProduits.size()-1);
+        } while (i <= nomProduits.size() - 1);
 
 
         return true;
+    }
+    public boolean verifyLoggedIn() {
+        reject(accountLogo);
+if(shortWaitUntil(visibilityOf(loggedHeader)))
+        return true;
+else
+    return false;
     }
 //
 //    public boolean verifyNotFoundResult(){
@@ -139,13 +142,19 @@ public class HomePage extends Page {
 //        return getTitle(element)!=0;
 //    }
 
-    public void selectCategory(String category){
+    public void selectCategory(String category) {
         scrollClick(category);
     }
 
-    public void selectSubcategory(String subcategory){
+    public void selectSubcategory(String subcategory) {
         scrollClick(subcategory);
     }
+
+    public void accesToLoginPage() {
+        click(cartIcon);
+        click(loginLink);
+    }
+
 
 //    public int getTitle(String element){
 //        int found = 0;

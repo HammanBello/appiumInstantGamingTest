@@ -6,7 +6,6 @@ Feature: Found Products
 
 	@TEST_OF-649
 	Scenario Outline: Find a product with search bar
-		Given User is on homepage
 		Given User is on search bar
 		When User enter a "<product>" in search bar
 		And User press on search button
@@ -14,7 +13,7 @@ Feature: Found Products
 
 		Examples:
 		  |product     |
-		  |FE     |
+		  |fe     |
 
 #
 #	@TEST_OF-648

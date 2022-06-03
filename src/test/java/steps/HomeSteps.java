@@ -73,4 +73,24 @@ public class HomeSteps {
     public void userPressOnSearchButton() {
         homePage.clickOnSearchBtn();
     }
+
+    @Given("User is on login page")
+    public void userAccessToLoginPage() {
+        homePage.accesToLoginPage();
+    }
+
+    @When("User enter a {string} and {string}")
+    public void userEnterAAnd(String cellphone_number, String password) {
+        homePage.login(cellphone_number, password);
+    }
+
+    @And("User press on login button")
+    public void userPressOnLoginButton() {
+        homePage.clickOnLoginBtn();
+    }
+
+    @Then("User should be in the application as a logged user")
+    public void userShouldBeInTheApplicationAsALoggedUser() {
+        Assert.assertTrue(homePage.verifyLoggedIn());
+    }
 }

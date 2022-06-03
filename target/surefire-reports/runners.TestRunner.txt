@@ -1,14 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: runners.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 47.47 s <<< FAILURE! - in runners.TestRunner
-runners.TestRunner.runScenario["Find a product with search bar", "Optional[Found Products]"](1)  Time elapsed: 29.596 s  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.id: com.kikuu:id/search_txt})
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@67b100fe (tried for 1 second(s) with 500 milliseconds interval)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-Cannot locate an element using By.chained({By.id: com.kikuu:id/search_txt})
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-5SIDRBI', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: driver.version: AndroidDriver
-
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 74.533 s - in runners.TestRunner

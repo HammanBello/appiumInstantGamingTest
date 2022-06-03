@@ -1,3 +1,4 @@
-runners\TestRunner.class
 runners\BaseRunner.class
+runners\TestRunner.class
+steps\Hooks.class
 steps\HomeSteps.class
