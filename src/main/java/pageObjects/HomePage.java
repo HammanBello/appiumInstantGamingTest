@@ -50,7 +50,7 @@ public class HomePage extends Page {
         try {
             shortWaitUntil(visibilityOf(element));
             click(element);
-        } catch (Exception ex) {
+        } catch (Exception e) {
         }
     }
 
