@@ -13,30 +13,30 @@ Feature: Found Products
 
 		Examples:
 		  |product     |
-		  |fe     |
-
-#
-#	@TEST_OF-648
-#	Scenario Outline: Suggestions when entering a product
-#		Given User is on search bar
-#		When User enter a "<text>" in search bar
-#		Then User should see suggestions appear
-#
-#		Examples:
-#		  |text     |
-#		  |homme    |
+		  |fe    	   |
 
 
-#	@TEST_OF-659
-#	Scenario Outline: Not find product
-#		Given User is on search bar
-#		When User enter a "<product>" in search bar
-#		And User validate his choice
-#		Then User should see message about no result found
-#
-#		Examples:
-#		  |product     |
-#		  |Bbobda      |
+	@TEST_OF-648
+	Scenario Outline: Suggestions when entering a product
+		Given User is on search bar
+		When User enter a "<text>" in search bar
+		Then User should see suggestions appear
+
+		Examples:
+		  |text     |
+		  |men    |
+
+
+	@TEST_OF-659
+	Scenario Outline: Not find product
+		Given User is on search bar
+		When User enter a "<product>" in search bar
+		And User press on search button
+		Then User should see message about no result found
+
+		Examples:
+		  |product     |
+		  |Bbobda      |
 #
 #
 #	@TEST_OF-652

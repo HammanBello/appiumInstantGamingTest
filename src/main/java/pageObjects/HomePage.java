@@ -21,10 +21,14 @@ public class HomePage extends Page {
     private MobileElement loginLink;
     @AndroidFindBy(id = "com.kikuu:id/tab_cart_img")
     private MobileElement cartIcon;
+    @AndroidFindBy(id = "com.kikuu:id/no_data_hint_img")
+    private MobileElement noResultImage;
     @AndroidFindBy(id = "com.kikuu:id/login_submit_btn")
     private MobileElement loginBtn;
     @AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
     private MobileElement permissionAllowBtn;
+    @AndroidFindBy(id = "com.kikuu:id/listview")
+    private MobileElement searchPreviews;
     @AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_foreground_only_button")
     private MobileElement positionAllowBtn;
     @AndroidFindBy(id = "com.kikuu:id/hot_keys_flipper")
@@ -105,26 +109,26 @@ public class HomePage extends Page {
 
     public boolean verifyFoundResult(String S) {
         S = S.toUpperCase();
-        System.out.println(nomProduits.size());
         int i = 0;
         do {
-            System.out.println(nomProduits.get(i).getText());
             shortWaitUntil(visibilityOf(nomProduits.get(i)));
-            System.out.println(nomProduits.get(i).getText().toUpperCase().contains(S));
             if (!nomProduits.get(i).getText().contains(S))
                 return false;
             i++;
         } while (i <= nomProduits.size() - 1);
-
-
         return true;
     }
     public boolean verifyLoggedIn() {
         reject(accountLogo);
-if(shortWaitUntil(visibilityOf(loggedHeader)))
-        return true;
-else
-    return false;
+        return shortWaitUntil(visibilityOf(loggedHeader));
+    }
+
+    public boolean verifySearchNoResultImg() {
+        return shortWaitUntil(visibilityOf(noResultImage));
+    }
+
+    public boolean verifySearchPreview() {
+        return shortWaitUntil(visibilityOf(searchPreviews));
     }
 //
 //    public boolean verifyNotFoundResult(){

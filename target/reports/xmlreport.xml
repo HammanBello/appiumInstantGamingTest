@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="72.358">
-<testcase classname="Found Products" name="Find a product with search bar" time="23.759">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="108.294">
+<testcase classname="Found Products" name="Find a product with search bar" time="26.775">
 <system-out><![CDATA[Given User is on homepage...................................................passed
 Given User is on search bar.................................................passed
 When User enter a "fe" in search bar........................................passed
@@ -8,7 +8,22 @@ And User press on search button.............................................pass
 Then User should see some results under the searchbar with the word "fe"....passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login" name="Login as subscribed user" time="28.579">
+<testcase classname="Found Products" name="Suggestions when entering a product" time="17.582">
+<system-out><![CDATA[Given User is on homepage...................................................passed
+Given User is on search bar.................................................passed
+When User enter a "men" in search bar.......................................passed
+Then User should see suggestions appear.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Found Products" name="Not find product" time="19.004">
+<system-out><![CDATA[Given User is on homepage...................................................passed
+Given User is on search bar.................................................passed
+When User enter a "Bbobda" in search bar....................................passed
+And User press on search button.............................................passed
+Then User should see message about no result found..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="Login as subscribed user" time="27.311">
 <system-out><![CDATA[Given User is on homepage...................................................passed
 Given User is on login page.................................................passed
 When User enter a "696074190" and "Mimosamimosa1."..........................passed

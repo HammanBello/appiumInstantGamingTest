@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +104,22 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="runners.TestRunner" hash-for-method="runScenario(&quot;Login as subscribed user&quot;, &quot;Optional[Login]&quot;)">runScenario("Login as subscribed user", "Optional[Login]")</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="runners.TestRunner" hash-for-method="runScenario(&quot;Not find product&quot;, &quot;Optional[Found Products]&quot;)">runScenario("Not find product", "Optional[Found Products]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="runners.TestRunner" hash-for-method="runScenario(&quot;Find a product with search bar&quot;, &quot;Optional[Found Products]&quot;)">runScenario("Find a product with search bar", "Optional[Found Products]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="runners.TestRunner" hash-for-method="runScenario(&quot;Suggestions when entering a product&quot;, &quot;Optional[Found Products]&quot;)">runScenario("Suggestions when entering a product", "Optional[Found Products]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="runners.TestRunner" hash-for-method="runScenario(&quot;Login as subscribed user&quot;, &quot;Optional[Login]&quot;)">runScenario("Login as subscribed user", "Optional[Login]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -132,10 +142,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Login as subscribed user&quot;, &quot;Optional[Login]&quot;)">
-                  </a> <!-- runScenario("Login as subscribed user", "Optional[Login]") -->
+                  <a name="runScenario(&quot;Not find product&quot;, &quot;Optional[Found Products]&quot;)">
+                  </a> <!-- runScenario("Not find product", "Optional[Found Products]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Login as subscribed user", "Optional[Login]")</span>
+                  <span class="parameters">("Not find product", "Optional[Found Products]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -146,6 +156,26 @@
                   </a> <!-- runScenario("Find a product with search bar", "Optional[Found Products]") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Find a product with search bar", "Optional[Found Products]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Suggestions when entering a product&quot;, &quot;Optional[Found Products]&quot;)">
+                  </a> <!-- runScenario("Suggestions when entering a product", "Optional[Found Products]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Suggestions when entering a product", "Optional[Found Products]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Login as subscribed user&quot;, &quot;Optional[Login]&quot;)">
+                  </a> <!-- runScenario("Login as subscribed user", "Optional[Login]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Login as subscribed user", "Optional[Login]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -211,20 +241,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runners.TestRunner')
-data.setCell(0, 3, 28595);
+data.setCell(0, 3, 27320);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'runners.TestRunner')
-data.setCell(1, 3, 24085);
+data.setCell(1, 3, 27006);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'runners.TestRunner')
+data.setCell(2, 3, 19016);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'runners.TestRunner')
+data.setCell(3, 3, 17594);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 52 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -252,28 +290,36 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runners.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@59a79443)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@3c770db4)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeTest(null)</span>
-                <span class="method-start">886 ms</span>
+                <span class="method-start">833 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("Find a product with search bar", "Optional[Found Products]")</span>
-                <span class="method-start">19924 ms</span>
+                <span class="method-start">17246 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Suggestions when entering a product", "Optional[Found Products]")</span>
+                <span class="method-start">44255 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Not find product", "Optional[Found Products]")</span>
+                <span class="method-start">61849 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login as subscribed user", "Optional[Login]")</span>
-                <span class="method-start">44014 ms</span>
+                <span class="method-start">80866 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">72626 ms</span>
+                <span class="method-start">108187 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">73091 ms</span>
+                <span class="method-start">108951 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

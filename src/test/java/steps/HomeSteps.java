@@ -93,4 +93,15 @@ public class HomeSteps {
     public void userShouldBeInTheApplicationAsALoggedUser() {
         Assert.assertTrue(homePage.verifyLoggedIn());
     }
+
+    @Then("User should see suggestions appear")
+    public void userShouldSeeSuggestionsAppear() {
+       Assert.assertTrue(homePage.verifySearchPreview());
+    }
+
+    @Then("User should see message about no result found")
+    public void userShouldSeeMessageAboutNoResultFound() {
+        Assert.assertTrue(homePage.verifySearchNoResultImg());
+
+    }
 }
