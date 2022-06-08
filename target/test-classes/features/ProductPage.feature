@@ -9,6 +9,14 @@
 
 #  @TEST_OF-658
 #  Scenario: Display of product card
+#    Given User is on homepage
+#    And User scroll and press on "Offres du jour"
+#    When User press on a product
+#    Then User should be able to see choosen product info
+
+
+
+
 #    Given User is on product page
 #    When User select a product
 #    Then User should be able to see choosen product info

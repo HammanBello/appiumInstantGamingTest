@@ -6,6 +6,7 @@ pageObjects\HomePage.class
 drivers\DriverFactory.class
 drivers\AppiumDriverManager.class
 drivers\MobileDriver.class
+pageObjects\ProductPage.class
 server\AppiumServer.class
 config\SystemPropertiesReader.class
 pageObjects\Page.class

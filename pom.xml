@@ -13,9 +13,10 @@
         <maven.compiler.target>8</maven.compiler.target>
         <testng.version>7.4.0</testng.version>
         <appium.version>7.6.0</appium.version>
-        <cucumber.version>7.1.0</cucumber.version>
+        <cucumber.version>7.2.3</cucumber.version>
         <gherkin.version>22.0.0</gherkin.version>
         <log4j.version>2.14.1</log4j.version>
+        <allure.version>2.17.3</allure.version>
     </properties>
 
     <dependencies>
@@ -68,6 +69,13 @@
         </dependency>
 
         <!-- Logging -->
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber7-jvm</artifactId>
+            <version>${allure.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
@@ -80,6 +88,11 @@
             <version>${log4j.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber6-jvm</artifactId>
+            <version>${allure.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

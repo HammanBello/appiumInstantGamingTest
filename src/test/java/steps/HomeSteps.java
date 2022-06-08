@@ -104,4 +104,16 @@ public class HomeSteps {
         Assert.assertTrue(homePage.verifySearchNoResultImg());
 
     }
+
+    @And("User scroll and press on \"Offres du jour\"")
+    public void userScrollAndPressOn() {
+        homePage.verifySearchPreview(); }
+
+    @When("User press on a product")
+    public void userPressOnAProduct() {
+    }
+
+    @Then("User should be able to see choosen product info")
+    public void userShouldBeAbleToSeeChoosenProductInfo() {
+    }
 }
